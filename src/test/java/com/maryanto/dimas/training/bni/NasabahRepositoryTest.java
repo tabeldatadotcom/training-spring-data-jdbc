@@ -30,6 +30,12 @@ public class NasabahRepositoryTest {
         Assertions.assertTrue(nasabah001Optional.isPresent(), "check nasabah 001 datanya ada!");
         log.info("check nasabah 001 datanya ada!, {}", nasabah001Optional.isPresent());
 
+        if (nasabah001Optional.isPresent()){
+            Nasabah nasabah = nasabah001Optional.get();
+            log.info("data nasabah: {}, tabungan: {}", nasabah, nasabah.getTabunganList());
+
+        }
+
 //        List<Nasabah> list = this.dao.findAll();
 //        log.info("check jumlah data nasabah ada: {}", list.size());
 //        Assertions.assertEquals(list.size(), 1, "Jumlah data nasabah ada 1!");
