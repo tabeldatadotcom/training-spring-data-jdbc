@@ -7,7 +7,13 @@ import java.util.Optional;
 
 public interface NasabahInt {
 
-    public List<Nasabah> findAll();
+    List<Nasabah> findAll();
 
-    public Optional<Nasabah> findByCif(String cif);
+    Optional<Nasabah> findByCif(String cif);
+
+    Nasabah save(Nasabah nasabah);
+
+    void update(Nasabah nasabah);
+
+    void delete(String id);
 }

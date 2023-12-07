@@ -54,4 +54,19 @@ public class NasabahDaoJdbcTemplate implements NasabahInt {
             return Optional.empty();
         }
     }
+
+    @Override
+    public Nasabah save(Nasabah nasabah) {
+        return null;
+    }
+
+    @Override
+    public void update(Nasabah nasabah) {
+
+    }
+
+    @Override
+    public void delete(String id) {
+
+    }
 }
