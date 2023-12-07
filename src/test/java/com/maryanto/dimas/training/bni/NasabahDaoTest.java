@@ -1,11 +1,12 @@
 package com.maryanto.dimas.training.bni;
 
-import com.maryanto.dimas.training.bni.dao.NasabahDao;
+import com.maryanto.dimas.training.bni.dao.NasabahInt;
 import com.maryanto.dimas.training.bni.model.Nasabah;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
@@ -15,10 +16,10 @@ import java.util.Optional;
 @Slf4j
 public class NasabahDaoTest {
 
-    private NasabahDao dao;
+    private NasabahInt dao;
 
     @Autowired
-    public NasabahDaoTest(NasabahDao dao) {
+    public NasabahDaoTest(@Qualifier("nasabahDaoJdbcTemplate") NasabahInt dao) {
         this.dao = dao;
     }
 

@@ -1,10 +1,10 @@
 package com.maryanto.dimas.training.bni.controller;
 
-import com.maryanto.dimas.training.bni.dao.NasabahDao;
+import com.maryanto.dimas.training.bni.dao.NasabahDaoJdbcTemplate;
 
 public class NasabahController {
 
-    private NasabahDao dao;
+    private NasabahDaoJdbcTemplate dao;
 
     public void getNasabah(){
         dao.findByCif("123434");
